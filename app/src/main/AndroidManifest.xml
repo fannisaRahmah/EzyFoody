@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.UTSMoProg">
         <activity
+            android:name=".MyOrderActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

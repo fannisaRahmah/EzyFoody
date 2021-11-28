@@ -2,14 +2,16 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_margin="4dp"
     android:orientation="horizontal">
 
     <ImageView
+        android:id="@+id/iv_image"
         android:layout_width="120dp"
         android:layout_height="120dp"
         android:scaleType="centerCrop"
-        android:src="@drawable/airmineral"/>
+        tools:src="@drawable/airmineral"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -19,15 +21,18 @@
         android:padding="16dp">
 
         <TextView
+            android:id="@+id/tv_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="4dp"
-            android:text="Air Mineral"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+            tools:text="Air Mineral"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
         <TextView
+            android:id="@+id/tv_price"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Rp 4.000,-"
+            tools:text="Rp 4.000,-"
             android:textAppearance="@style/TextAppearance.AppCompat.Small"/>
     </LinearLayout>
 </LinearLayout>
