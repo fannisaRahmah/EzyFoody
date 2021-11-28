@@ -1,41 +1,41 @@
 package com.example.utsmoprog;
 
-import android.content.Intent;
-import android.os.Bundle;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
+import android.content.Intent;
+import android.os.Bundle;
+
+import com.example.utsmoprog.adapter.ItemList2Adapter;
 import com.example.utsmoprog.adapter.ItemListAdapter;
 import com.example.utsmoprog.databinding.ActivityMyOrderBinding;
+import com.example.utsmoprog.databinding.ActivityOrderCompleteBinding;
 import com.example.utsmoprog.model.Item;
 import com.example.utsmoprog.model.ItemsData;
 
 import java.util.ArrayList;
 
-public class MyOrderActivity extends AppCompatActivity {
+public class OrderCompleteActivity extends AppCompatActivity {
 
-    private ActivityMyOrderBinding binding;
+    private ActivityOrderCompleteBinding binding;
     private final ArrayList<Item> list = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = ActivityMyOrderBinding.inflate(getLayoutInflater());
+        binding = ActivityOrderCompleteBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        binding.rvMyorder.setHasFixedSize(true);
+        binding.rvPayitem.setHasFixedSize(true);
         list.addAll(ItemsData.getListData());
         showRecyclerView();
 
-        binding.btnPayNow.setOnClickListener(v -> startActivity(new Intent(this, OrderCompleteActivity.class)));
+        binding.btnMenuUtama.setOnClickListener(v -> startActivity(new Intent(this, MainActivity.class)));
     }
 
     private void showRecyclerView() {
-        ItemListAdapter adapter = new ItemListAdapter(list);
-        binding.rvMyorder.setLayoutManager(new LinearLayoutManager(this));
-        binding.rvMyorder.setAdapter(adapter);
+        ItemList2Adapter adapter = new ItemList2Adapter(list);
+        binding.rvPayitem.setLayoutManager(new LinearLayoutManager(this));
+        binding.rvPayitem.setAdapter(adapter);
     }
-
-
 }

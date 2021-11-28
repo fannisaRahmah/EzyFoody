@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.UTSMoProg">
         <activity
+            android:name=".OrderActivity"
+            android:exported="false" />
+        <activity
+            android:name=".OrderCompleteActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DrinksActivity"
+            android:exported="false" />
+        <activity
             android:name=".MyOrderActivity"
             android:exported="false" />
         <activity

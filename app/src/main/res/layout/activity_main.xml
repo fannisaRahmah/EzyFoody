@@ -43,7 +43,7 @@
                 android:layout_column="1"
                 android:backgroundTint="@color/white"
                 android:text="My Order"
-                android:textColor="@color/black" />
+                android:textColor="@color/blue" />
         </GridLayout>
 
 
@@ -57,7 +57,7 @@
             android:alignmentMode="alignMargins">
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/drinks"
+                android:id="@+id/btn_drinks"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 app:cardElevation="6dp"

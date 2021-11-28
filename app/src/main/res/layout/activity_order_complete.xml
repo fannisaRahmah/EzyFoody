@@ -31,16 +31,17 @@
                 android:layout_columnWeight="1"
                 android:fontFamily="sans-serif-medium"
                 android:gravity="center_vertical"
-                android:text="My Order"
+                android:text="Your Order Complete. Thank you"
                 android:textColor="@color/white"
-                android:textSize="25sp" />
+                android:textSize="16sp" />
 
             <Button
-                android:id="@+id/btn_payNow"
+                android:id="@+id/btn_menuUtama"
                 android:layout_width="120dp"
                 android:layout_height="40dp"
                 android:backgroundTint="@color/white"
-                android:text="Pay Now"
+                android:text="Menu Utama"
+                android:textSize="11sp"
                 android:textColor="@color/blue" />
         </GridLayout>
 
@@ -50,13 +51,12 @@
             android:layout_gravity="left"
             android:textColor="@color/white"
             android:layout_marginBottom="20dp"
-            android:text="Total: Rp. 41.000 "/>
+            android:text="Total: Rp. 26.000,-"/>
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv_myorder"
+            android:id="@+id/rv_payitem"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            tools:listitem="@layout/activity_myorder_item" />
-
+            tools:listitem="@layout/activity_pay_item" />
     </LinearLayout>
 </LinearLayout>

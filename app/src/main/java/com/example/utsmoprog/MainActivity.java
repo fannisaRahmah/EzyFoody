@@ -17,11 +17,7 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        binding.drinks.setOnClickListener(v -> {
-            Intent drink = new Intent(MainActivity.this, DrinksActivity.class);
-            startActivity(drink);
-        });
-
+        binding.btnDrinks.setOnClickListener(v -> startActivity(new Intent(this, DrinksActivity.class)));
         binding.btnMyorder.setOnClickListener(v -> startActivity(new Intent(this, MyOrderActivity.class)));
     }
 }
