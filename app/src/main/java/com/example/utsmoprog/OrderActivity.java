@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import com.example.utsmoprog.adapter.ItemList3Adapter;
 import com.example.utsmoprog.databinding.ActivityOrderBinding;
 import com.example.utsmoprog.model.Item;
+import com.example.utsmoprog.model.ItemsData;
 
 import java.util.ArrayList;
 
@@ -24,6 +25,7 @@ public class OrderActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         binding.rvMyorder.setHasFixedSize(true);
+        list.addAll(ItemsData.getListData());
         showRecyclerView();
 
         binding.btnMyorder.setOnClickListener(v -> startActivity(new Intent(this, MyOrderActivity.class)));
