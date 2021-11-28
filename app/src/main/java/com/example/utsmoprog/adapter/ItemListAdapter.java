@@ -33,7 +33,7 @@ public class ItemListAdapter extends RecyclerView.Adapter<ItemListAdapter.ViewHo
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         final Item item = itemArrayList.get(position);
         holder.binding.tvName.setText(item.getName());
-        holder.binding.tvPrice.setText(item.getPrice());
+        holder.binding.tvPrice.setText(item.getQuantity()+" x "+item.getPrice());
         Glide.with(holder.itemView.getContext())
                 .load(item.getImage())
                 .into(holder.binding.ivImage);

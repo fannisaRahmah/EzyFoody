@@ -1,7 +1,7 @@
 package com.example.utsmoprog.model;
 
 public class Item {
-    private int image;
+    private int image, quantity;
     private String name, price;
 
     public int getImage() {
@@ -26,5 +26,13 @@ public class Item {
 
     public void setPrice(String price) {
         this.price = price;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
     }
 }

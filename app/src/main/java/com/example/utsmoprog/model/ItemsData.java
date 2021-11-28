@@ -27,6 +27,13 @@ public class ItemsData {
             R.drawable.alpukat
     };
 
+    public static int[] itemQty = {
+            1,
+            5,
+            2,
+            8
+    };
+
     public static ArrayList<Item> getListData() {
         ArrayList<Item> list = new ArrayList<>();
         for (int position = 0; position < itemName.length; position++) {
@@ -34,6 +41,7 @@ public class ItemsData {
             data.setName(itemName[position]);
             data.setPrice(itemPrice[position]);
             data.setImage(itemPhoto[position]);
+            data.setQuantity(itemQty[position]);
             list.add(data);
         }
         return list;
