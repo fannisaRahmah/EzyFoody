@@ -12,6 +12,7 @@ import com.example.utsmoprog.model.Item;
 import com.example.utsmoprog.model.ItemsData;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class OrderActivity extends AppCompatActivity {
 
@@ -25,10 +26,11 @@ public class OrderActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         binding.rvMyorder.setHasFixedSize(true);
-        list.addAll(ItemsData.getListData());
+        list.addAll(Collections.singleton(ItemsData.getListData().get(1)));
         showRecyclerView();
 
         binding.btnMyorder.setOnClickListener(v -> startActivity(new Intent(this, MyOrderActivity.class)));
+        binding.btnOrderMore.setOnClickListener(v -> startActivity(new Intent(this, MyOrderActivity.class)));
     }
 
     private void showRecyclerView() {
