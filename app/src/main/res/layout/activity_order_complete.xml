@@ -51,7 +51,7 @@
             android:layout_gravity="left"
             android:textColor="@color/white"
             android:layout_marginBottom="20dp"
-            android:text="Total: Rp. 26.000,-"/>
+            android:text="Total: Rp. 198.000,-"/>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_payitem"
