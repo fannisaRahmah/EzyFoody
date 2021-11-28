@@ -31,13 +31,15 @@ public class ItemList3Adapter extends RecyclerView.Adapter<ItemList3Adapter.View
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        final Item item = itemArrayList.get(1);
-        holder.binding.tvName.setText(item.getName());
-        holder.binding.tvPrice.setText(item.getPrice());
-        holder.binding.tvQty.setText(item.getQuantity());
-        Glide.with(holder.itemView.getContext())
-                .load(item.getImage())
-                .into(holder.binding.ivImage);
+        final Item item = itemArrayList.get(position);
+        if (item.getName().equals("Jus Apel")){
+            holder.binding.tvName.setText(item.getName());
+            holder.binding.tvPrice.setText(item.getPrice());
+            holder.binding.tvQty.setText(item.getQuantity());
+            Glide.with(holder.itemView.getContext())
+                    .load(item.getImage())
+                    .into(holder.binding.ivImage);
+        }
     }
 
     @Override
